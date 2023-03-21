@@ -1,0 +1,14 @@
+name: My Workflow
+on: push
+
+inputs:
+  packagesToDeploy:
+    description: 'Please write all the package directory name with space to deploy'
+    required: true
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Metadata
+        run: echo "The metadata is: ${{ inputs.metadata }}"
